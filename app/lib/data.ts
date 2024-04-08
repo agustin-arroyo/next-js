@@ -111,6 +111,10 @@ export async function fetchFilteredInvoices(
   noStore();
   const offset = (currentPage - 1) * ITEMS_PER_PAGE;
 
+  console.log('fetchFilteredInvoices currentPage', currentPage);
+  console.log('fetchFilteredInvoices offset', offset);
+  console.log('fetchFilteredInvoices ITEMS_PER_PAGE', ITEMS_PER_PAGE);
+
   try {
     const invoices = await sql<InvoicesTable>`
       SELECT
